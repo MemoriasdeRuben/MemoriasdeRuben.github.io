@@ -107,24 +107,13 @@
             let playButton = document.getElementById("play-button");
             
             // Agregar imágenes del 1 al 87
-            for (let i = 1; i <= 87; i++) {
+            for (let i = 1; i <= 85; i++) {
                 let img = document.createElement("img");
                 img.src = `${i}.jpeg`;
                 img.alt = `Foto ${i}`;
                 gallery.appendChild(img);
             }
-            
-            // Agregar videos del 1 al 6
-            for (let i = 1; i <= 6; i++) {
-                let video = document.createElement("video");
-                video.controls = true;
-                let source = document.createElement("source");
-                source.src = `video${i}.mp4`;
-                source.type = "video/mp4";
-                video.appendChild(source);
-                gallery.appendChild(video);
-            }
-            
+                       
             // Animación inicial de corazón
             setTimeout(() => {
                 gallery.classList.add("animate-heart");
